@@ -1,14 +1,42 @@
 import React from 'react';
-import { View, Text, TextInput } from 'react-native';
+import {
+  View, Text, StatusBar, Image,
+} from 'react-native';
+
+import { ButtonIcon } from '../../components/ButtonIcon';
 
 import { styles } from './styles';
+
+import Illustration from '../../assets/illustration.png';
 
 export default function SignIn() {
   return (
     <View style={styles.container}>
-      <Text>oiii</Text>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
 
-      <TextInput style={styles.input} />
+      <Image source={Illustration} style={styles.image} resizeMode="stretch" />
+
+      <View style={styles.content}>
+        <Text style={styles.title}>
+          Organize
+          {'\n'}
+          suas jogatinas
+          {'\n'}
+          facilmente
+        </Text>
+
+        <Text style={styles.subtitle}>
+          Crie grupos para jogar seus games
+          {'\n'}
+          favoritos com seus amigos
+        </Text>
+
+        <ButtonIcon title="Entrar com Discord" activeOpacity={0.7} />
+      </View>
     </View>
   );
 }
