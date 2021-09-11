@@ -31,12 +31,13 @@ module.exports = {
   },
   rules: {
     'react/jsx-props-no-spreading': 'off',
-
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
     'linebreak-style': 0,
     'import/prefer-default-export': 'off',
+    camelcase: 'off',
+
     'import/extensions': [
       'error',
       'ignorePackages',
