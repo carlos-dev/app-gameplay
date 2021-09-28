@@ -37,6 +37,7 @@ module.exports = {
     'linebreak-style': 0,
     'import/prefer-default-export': 'off',
     camelcase: 'off',
+    'react/jsx-no-bind': ['error', { ignoreDOMComponents: true, allowFunctions: true, allowArrowFunctions: true }],
 
     'import/extensions': [
       'error',
