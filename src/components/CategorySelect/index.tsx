@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ScrollView } from 'react-native';
 
 import { styles } from './styles';
 import { categories } from '../../utils/categories';
 import Category from '../Category';
 
-type Props = {
-  categorySelected: string;
-  setCategory: (categoryId: string) => void;
-}
+export default function CategorySelect() {
+  const [categoryItem, setCategoryItem] = useState('');
 
-export default function CategorySelect({ categorySelected, setCategory }: Props) {
+  function handleCategorySelect(categoryId: string) {
+    if (categoryId === categoryItem) {
+      setCategoryItem('');
+    } else {
+      setCategoryItem(categoryId);
+    }
+  }
+
   return (
     <ScrollView
       horizontal
@@ -24,8 +29,8 @@ export default function CategorySelect({ categorySelected, setCategory }: Props)
             key={category.id}
             title={category.title}
             icon={category.icon}
-            checked={category.id === categorySelected}
-            onPress={() => setCategory(category.id)}
+            checked={category.id === categoryItem}
+            onPress={() => handleCategorySelect(category.id)}
           />
         ))
       }

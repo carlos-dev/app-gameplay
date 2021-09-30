@@ -39,3 +39,7 @@ export default function Category({
     </RectButton>
   );
 }
+
+Category.defaultProps = {
+  checked: false,
+};
