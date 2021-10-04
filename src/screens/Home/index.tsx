@@ -24,6 +24,18 @@ export default function Home() {
       date: '22/04 às 20:40',
       description: 'bora jogar',
     },
+    {
+      id: '2',
+      guild: {
+        id: '1',
+        name: 'Lendários',
+        icon: null,
+        owner: true,
+      },
+      category: '1',
+      date: '22/04 às 20:40',
+      description: 'bora jogar',
+    },
   ];
 
   return (
@@ -33,7 +45,7 @@ export default function Home() {
         <ButtonAdd />
       </View>
 
-      <CategorySelect />
+      <CategorySelect hasCheckBox />
 
       <View style={styles.content}>
         <ListHeader title="Partidas agendadas" subtitle="Total 6" />

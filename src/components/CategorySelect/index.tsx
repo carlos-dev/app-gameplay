@@ -5,7 +5,11 @@ import { styles } from './styles';
 import { categories } from '../../utils/categories';
 import Category from '../Category';
 
-export default function CategorySelect() {
+type Props = {
+  hasCheckBox?: boolean;
+}
+
+export default function CategorySelect({ hasCheckBox }: Props) {
   const [categoryItem, setCategoryItem] = useState('');
 
   function handleCategorySelect(categoryId: string) {
@@ -31,9 +35,14 @@ export default function CategorySelect() {
             icon={category.icon}
             checked={category.id === categoryItem}
             onPress={() => handleCategorySelect(category.id)}
+            hasCheckBox={hasCheckBox}
           />
         ))
       }
     </ScrollView>
   );
 }
+
+CategorySelect.defaultProps = {
+  hasCheckBox: false,
+};

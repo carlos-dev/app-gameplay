@@ -51,5 +51,5 @@ export default function Category({
 
 Category.defaultProps = {
   checked: false,
-  hasCheckBox: true,
+  hasCheckBox: false,
 };
