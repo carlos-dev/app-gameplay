@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   ImageBackground, Text, View, FlatList,
 } from 'react-native';
@@ -6,9 +6,11 @@ import { Fontisto } from '@expo/vector-icons';
 import { BorderlessButton } from 'react-native-gesture-handler';
 
 import { Background } from '../../components/Background';
+import { ButtonIcon } from '../../components/ButtonIcon';
 import ListHeader from '../../components/ListHeader';
 import Member from '../../components/Member';
 import Header from '../../components/Header';
+import ListDivider from '../../components/ListDivider';
 
 import { theme } from '../../global/styles/theme';
 import { styles } from './styles';
@@ -60,9 +62,15 @@ export default function AppointmentDetails() {
         data={members}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <Member />
+          <Member data={item} />
         )}
+        ItemSeparatorComponent={() => <ListDivider />}
+        style={styles.members}
       />
+
+      <View style={styles.footer}>
+        <ButtonIcon title="Entrar na partida" />
+      </View>
     </Background>
   );
 }

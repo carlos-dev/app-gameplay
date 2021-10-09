@@ -24,6 +24,7 @@ export default function SignIn() {
         <Image source={Illustration} style={styles.image} resizeMode="stretch" />
 
         <View style={styles.content}>
+
           <Text style={styles.title}>
             Concecte-se
             {'\n'}

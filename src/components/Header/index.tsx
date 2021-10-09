@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
