@@ -47,7 +47,7 @@ export default function Home() {
     <Background>
       <View style={styles.header}>
         <Profile />
-        <ButtonAdd />
+        <ButtonAdd onPress={() => navigation.navigate('AppointmentCreate')} />
       </View>
 
       <CategorySelect hasCheckBox />
